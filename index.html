@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="MainCtrl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="小刀商城：一家专业的网上购物综合微型平台">
+    <meta name="Keywords" content="网上购物,服装，天气，美食，秒杀，小刀商城">
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/goods.css">
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css"/>
+    <link rel="stylesheet" href="css/search.css"/>
+    <script src="js/libs/jquery-2.2.3.js"></script>
+    <script src="js/libs/swiper-3.3.1.min.js"></script>
+    <script src="js/libs/angular.js"></script>
+    <script src="js/libs/angular-route.min.js"></script>
+    <script src="js/app/app.js"></script>
+    <script src="js/app/Route.js"></script>
+    <script src="js/app/controller/MainCtrl.js"></script>
+    <script src="js/app/controller/indexCtrl.js"></script>
+    <script src="js/app/controller/searchCtrl.js"></script>
+    <script src="js/app/controller/mine.js"></script>
+    <script src="js/app/dircetive/backTop.js"></script>
+    <script src="js/app/controller/login.js"></script>
+    <script src="js/app/controller/register.js"></script>
+    <script src="js/app/controller/expect.js"></script>
+    <script src="js/app/controller/classify.js"></script>
+    <script src="js/app/dircetive/menu.js"></script>
+    <script src="js/app/controller/news.js"></script>
+    <script src="js/app/controller/weather.js"></script>
+    <script src="js/app/controller/attention.js"></script>
+    <script src="js/app/service/service.js"></script>
+    <script src="js/app/controller/cart.js"></script>
+    <script src="js/app/controller/seckill.js"></script>
+    <script src="js/app/controller/activity1.js"></script>
+    <script src="js/app/controller/activity2.js"></script>
+    <script src="js/app/controller/activity3.js"></script>
+    <script src="js/app/controller/activity4.js"></script>
+    <script src="http://static.geetest.com/static/tools/gt.js"></script>
+    <title>专业网上综合购物平台！-小刀商城</title>
+</head>
+<body class="homebody">
+<div id="nav" class="nav">
+    <div class="xd-search-box-cover"></div>
+    <div class="xd-nav-middle">
+        <span class="title">LC小刀</span>
+        <form action="" id="head-search" class="head-search">
+            <div class="search-box">
+                <i class="iconfont isou">&#xe61d;</i>
+                <a href="#search"><input type="text" id="insearch" class="insearch" placeholder="小刀商城，百件商品等你来拿！"/></a>
+            </div>
+        </form>
+        <div class="login">
+            <a id="index_Login" href="#login" class="a-login">
+                <span class="xd-search-icon-login">登录</span>
+            </a>
+            <a id="index_Login1" href="#mine" class="a-login1">
+                <i class="iconfont iuser">&#xe606;</i>
+            </a>
+        </div>
+    </div>
+</div>
+<nav class="g-head" id="login">
+    <div class="g-head-bj">
+        <a class="goodsback" href="javascript:history.back();"><div class="xd-header-icon-back"><span></span></div></a>
+        <div class="xd-head-title-login">小刀登录</div>
+    </div>
+</nav>
+<nav class="g-head" id="register">
+    <div class="g-head-bj">
+        <a class="goodsback" href="#login"><div class="xd-header-icon-back"><span></span></div></a>
+        <div class="xd-head-title-login">小刀注册</div>
+    </div>
+</nav>
+<nav class="g-head" id="expect">
+    <div class="g-head-bj">
+        <a class="goodsback" href="javascript:history.back();"><div class="xd-header-icon-back"><span></span></div></a>
+        <div class="xd-head-title-login">尽请期待</div>
+    </div>
+</nav>
+<nav class="g-head" id="myXD">
+    <div class="g-head-bj">
+        <a class="goodsback" href="javascript:history.back();"><div class="xd-header-icon-back"><span></span></div></a>
+        <div class="xd-head-title-login">我的小刀</div>
+        <div class="xd-header-icon-shortcut"><span></span></div>
+    </div>
+</nav>
+<nav class="g-head" id="cart">
+    <div class="g-head-bj">
+        <a class="goodsback" href="javascript:history.back();"><div class="xd-header-icon-back"><span></span></div></a>
+        <div class="xd-head-title-login">购物车</div>
+        <div class="xd-header-icon-shortcut"><span></span></div>
+    </div>
+</nav>
+<nav class="g-head" id="seckill" style="position: static !important;">
+    <div class="g-head-bj">
+        <a class="goodsback" href="#index"><div class="xd-header-icon-back"><span></span></div></a>
+        <div class="xd-head-title-login">掌上秒杀</div>
+        <div class="xd-header-icon-shortcut"><span></span></div>
+    </div>
+</nav>
+<nav class="g-head" id="attention">
+    <div class="g-head-bj">
+        <a class="goodsback" href="javascript:history.back();"><div class="xd-header-icon-back"><span></span></div></a>
+        <div class="xd-head-title-login">我的关注</div>
+        <div class="xd-header-icon-shortcut"><span></span></div>
+    </div>
+</nav>
+<nav class="g-head" id="activity1">
+    <div class="g-head-bj">
+        <a class="goodsback" href="javascript:history.back();"><div class="xd-header-icon-back"><span></span></div></a>
+        <div class="xd-head-title-login">百年坚果 美国绅士</div>
+        <div class="xd-header-icon-shortcut"><span></span></div>
+    </div>
+</nav>
+<nav class="g-head" id="activity2">
+    <div class="g-head-bj">
+        <a class="goodsback" href="javascript:history.back();"><div class="xd-header-icon-back"><span></span></div></a>
+        <div class="xd-head-title-login">华为平板 M3 首销</div>
+        <div class="xd-header-icon-shortcut"><span></span></div>
+    </div>
+</nav>
+<nav class="g-head" id="activity3">
+    <div class="g-head-bj">
+        <a class="goodsback" href="javascript:history.back();"><div class="xd-header-icon-back"><span></span></div></a>
+        <div class="xd-head-title-login">奥妙 洗护合一</div>
+        <div class="xd-header-icon-shortcut"><span></span></div>
+    </div>
+</nav>
+<nav class="g-head" id="activity4">
+    <div class="g-head-bj">
+        <a class="goodsback" href="javascript:history.back();"><div class="xd-header-icon-back"><span></span></div></a>
+        <div class="xd-head-title-login">君乐宝满减盛典</div>
+        <div class="xd-header-icon-shortcut"><span></span></div>
+    </div>
+</nav>
+<nav class="g-head" id="search-t">
+    <div class="g-head-bj">
+        <a class="goodsback" href="javascript:history.back();" id="back"><div class="xd-header-icon-back"><span></span></div></a>
+        <div class="xd-head-title-login1"><input type="text" class="key" id="key" placeholder="小刀商城，百件商品等你来拿！"/></div>
+        <a href="javascript:void(0);" id="sousuo"><div class="xd-search-icon-shortcut"><i class="iconfont">
+            &#xe605;</i></div></a>
+    </div>
+</nav>
+<nav class="g-head" id="classify">
+    <div class="g-head-bj">
+        <a class="goodsback" href="javascript:history.back();"><div class="xd-header-icon-back"><span></span></div></a>
+        <div class="xd-head-title-login1"><input type="text" class="key" placeholder="小刀商城，百件商品等你来拿！"/></div>
+        <div class="xd-header-icon-shortcut"><span></span></div>
+    </div>
+</nav>
+<nav class="tag-box newsbox">
+    <a href="#index"><div class="news-icon-back"><span><i class="iconfont newstitle-icon">&#xe60b;</i></span></div></a>
+    <div class="swiper-container-new">
+        <div class="swiper-wrapper" id="newstitle"></div>
+    </div>
+</nav>
+<menu></menu>
+<div ng-view></div>
+<div class="pop-dialog">
+    <div class="pop-body">
+        <p class="pop-msg">我们将发送短信验证码至<br><span></span></p>
+        <div class="pop-btns">
+            <a href="javascript:;" class="btn-pop btn-cancel">取消</a>
+            <a href="javascript:;" class="btn-pop btn-continue">确定</a>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <ul>
+        <li>
+            <a href="#index" class="foota"><p class="footcss"><i class="iconfont size">&#xe627;</i></p>
+
+                <p>首页</p></a>
+        </li>
+        <li>
+            <a href="#classify" class="foota"><p class="footcss"><i class="iconfont size">&#xe610;</i></p>
+
+                <p>分类</p></a>
+        </li>
+        <li>
+            <a href="#search" class="foota"><p class="footcss"><i class="iconfont size">&#xe61d;</i></p>
+
+                <p>发现</p></a>
+        </li>
+        <li>
+            <a href="#cart" class="foota"><p class="footcss"><i class="iconfont size">&#xe62d;</i></p>
+
+                <p>购物车</p></a>
+        </li>
+        <li>
+            <a id="mine" class="foota"><p class="footcss"><i class="iconfont size">&#xe61f;</i></p>
+
+                <p>我的</p></a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

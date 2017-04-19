@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="myGoods" ng-controller="goodsCtrl">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="小刀商城：一家专业的网上购物综合微型平台">
+    <meta name="Keywords" content="网上购物,服装，天气，美食，秒杀，小刀商城">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/goods.css"/>
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css"/>
+    <script src="js/libs/jquery-2.2.3.js"></script>
+    <script src="js/libs/swiper-3.3.1.min.js"></script>
+    <script src="js/libs/angular.js"></script>
+    <script src="js/libs/angular-route.min.js"></script>
+    <script src="js/app/app.js"></script>
+    <script src="js/app/Route.js"></script>
+    <script src="js/app/service/service.js"></script>
+    <script src="js/app/controller/goods.js"></script>
+    <script src="js/app/controller/map.js"></script>
+    <script src="js/app/controller/goods-s.js"></script>
+    <script src="js/app/controller/goodsdetails.js"></script>
+    <script src="js/app/controller/goodsevaluate.js"></script>
+    <script src="js/app/dircetive/backTop.js"></script>
+    <script src="js/app/dircetive/menu.js"></script>
+    <script src="js/app/service/filter.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=6ksoQIt7Mnty6pULRYyxhtdrFKlIBa56"></script>
+    <title></title>
+</head>
+<body class="homebody">
+<nav class="g-head" id="goodstou">
+    <div class="g-head-bj">
+        <a class="goodsback" href="javascript:history.back();"><div class="xd-header-icon-back"><span></span></div></a>
+        <ul class="xd-head-title">
+            <li class="header-tab-item"><a href="#goods-s" class="header-tab-title">商品</a></li>
+            <li class="header-tab-item"><a href="#goodsdetails" class="header-tab-title">详情</a></li>
+            <li class="header-tab-item"><a href="#goodsevaluate" class="header-tab-title">评价</a></li>
+        </ul>
+        <div class="xd-head-title1">
+            <input id="mapaddress" type="text" placeholder="小区/写字楼/学校..." style="font-size:18px"/>
+        </div>
+        <div class="xd-header-icon-shortcut"><span></span></div>
+    </div>
+</nav>
+<div class="gtitle"></div>
+<menu></menu>
+<div ng-view></div>
+<div class="goodsfoot">
+    <div class="goodsfoot-l">
+        <a href="javascript:void 0;"><i class="iconfont icn">&#xe62b;</i><span class="focus-info">客服</span></a>
+        <a href="javascript:void 0;"><i class="iconfont icn">&#xe632;</i><span class="focus-info">关注</span></a>
+        <a href="index.html#/cart"><i class="iconfont icn">&#xe62d;</i><span class="focus-info" id="cart-shownum">
+            购物车<i class="order-numbers" id="carNum"></i>
+        </span></a>
+    </div>
+    <div class="goodsfoot-right">
+        <a class="yellow-color" ng-click="gocart()">加入购物车</a>
+        <a class="red-color">立即购买</a>
+    </div>
+</div>
+</body>
+</html>

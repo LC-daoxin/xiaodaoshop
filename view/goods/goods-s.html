@@ -1,0 +1,99 @@
+<div class="scroll-imgs">
+    <div class="swiper-container">
+        <div class="swiper-wrapper" id="goodsimg"></div>
+        <div class="swiper-pagination gy-page"></div>
+    </div>
+</div>
+<div class="goodsjs">
+    <span class="goodstitle">
+        <i class="goodsred"><span class="label-text white-text">自营</span></i>
+        <span id="goodsname"></span>
+    </span>
+
+    <div class="prod-price">
+        <span class="yang-pic"></span>
+        <span class="yang-pic-price">
+            <span class="big-price"></span>.<span class="small-price"></span>
+        </span>
+
+        <div style="clear:both"></div>
+    </div>
+    <div style="clear:both"></div>
+    <div class="prod-act"></div>
+</div>
+<div class="border"></div>
+<div class="send-to">
+    <span class="part-note-msg">送至</span>
+    <a id="address" href="#map">
+        <div class="send_loc">
+            <span class="Address"><span class="city"></span><span>{{address}}</span><i class="iconfont dzicon">&#xe619;</i></span>
+        </div>
+    </a>
+</div>
+<div class="support">
+    <span class="part-note-msg">支持</span>
+
+    <div class="send_loc">
+        <span class="icon-zc inaol"><i class="iconfont inao">&#xe631;</i>7天无理由退货</span>
+        <span class="icon-zc inaol"><i class="iconfont inao">&#xe62f;</i>货到付款</span>
+        <span class="icon-zc inaol"><i class="iconfont inao">&#xe630;</i>自提</span>
+        <span class="icon-zc inaol"><i class="iconfont inao">&#xe62e;</i>退货免运费
+</span>
+    </div>
+    <div class="pro-count">
+        <span class="part-note-msg">数量</span>
+
+        <div class="quantity-wrapper">
+            <a class="quantity-decrease" ng-click="minus()">
+                <em id="minus">-</em>
+            </a>
+            <input type="number" class="quantity" value="1" ng-click="">
+            <a class="quantity-increase" ng-click="plus()">
+                <em id="plus">+</em>
+            </a>
+        </div>
+        <span class="lowestbuy-tip">(限购200件)</span>
+    </div>
+</div>
+<div class="border"></div>
+<div class="goodsshop">
+    <div class="shop-row1">
+        <div class="shop-row">
+            <div class="shop-icon"><img src=""/></div>
+            <span class="shop-name"></span>
+
+            <div class="shop-go">
+                <a href="javascript:void 0" class="shop-btn"><i class="iconfont inao shop-text">&#xe62c;</i><span class="shop-text">进入店铺</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="border"></div>
+<div class="ping">
+    <div class="goodseval">
+        <div class="part-note-msg">商品评价</div>
+        <div class="goodscomment"><a href="#goodsevaluate">更多评价<i class="iconfont ml">&#xe61c;</i></a></div>
+        <div style="clear: both"></div>
+    </div>
+    <div class="comment-list-item" ng-repeat="list in lists track by $index">
+        <a href="#goodsevaluate">
+            <span class="star" id="{{list.userid}}"></span>
+            <span class="staruser">{{list.username|hide}}</span>
+
+            <div style="clear: both"></div>
+            <div class="comment-item-content">
+                <p>{{list.commenttext}}</p>
+            </div>
+            <div class="comment-item-date">{{list.time}}</div>
+        </a>
+    </div>
+</div>
+<div gbacktop ></div>
+<div class="message-floor" id="messageBox" style="display: none; visibility: visible;">
+    <div class="messge-box" style="margin-top: -44px; margin-left: -90px; width: 180px; height: 88px;">
+        <div class="messge-box-icon"><i class="message-toast-icon succee-icon"></i></div>
+        <div class="messge-box-content">加入购物车成功</div>
+    </div>
+</div>
+<div class="border"></div>
+<div class="footg"></div>

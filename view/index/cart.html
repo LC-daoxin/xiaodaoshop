@@ -1,0 +1,109 @@
+<div class="gtitle"></div>
+<div id="emptyCart">
+    <div class="shp-cart-empty" id="logincart">
+        <em class="cart-empty-icn"></em>
+        <span class="empty-msg">购物车空空如也,赶紧逛逛吧~</span>
+    </div>
+    <div class="shp-cart-empty" id="emptyCartLogin">
+        <em class="cart-empty-icn"></em>
+        <span class="empty-msg">登录后可同步其他设备购物车</span>
+        <a href="#login" class="to-login-see-btn">
+            登录
+        </a>
+    </div>
+    <ul class="shp-cart-list">
+        <li ng-repeat="item in cartlists track by $index" id="{{item.goodsid}}">
+            <div class="items">
+                <div class="shp-cart-item-core shop-cart-display">
+                    <a class="cart-product-cell-1" href="goods.html?id={{item.goodsid}}">
+                        <img class="cart-photo-thumb" ng-src="{{item.imgsrc}}">
+                    </a>
+                    <div class="cart-product-cell-2">
+                        <div class="cart-product-name">
+                            <a href="goods.html?id={{item.goodsid}}"><span>{{item.tjtitle}}</span></a>
+                        </div>
+                        <div class="cartnumshow">
+                            <div class="cart-product-cell-3">
+                                <span class="shp-cart-item-price">¥<strong>{{item.bigprice}}</strong>.<small>{{item.smallprice}}</small></span>
+                                <span class="heji">小计：<a>{{item.totalnum|currency : '￥'}}</a></span>
+                            </div>
+                            <div class="cart-product-cell-5">
+                                <span class="num-cont-show">{{item.goodsnum}}</span>
+                                <div class="shop-btn-com">
+                                    <a class="cart-new-btn edit-mode-in" ng-click="changecart(item)"><span class="btn-msg-in">编辑</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cartnumset">
+                            <div class="price-count-edit">
+                                <span class="shp-cart-item-price">¥<strong>{{item.bigprice}}</strong>.<small>{{item.smallprice}}</small></span>
+                                <span class="lowestbuy-tip">(限购200件)</span>
+                                <div class="quantity-wrapper cartbtnright">
+                                    <a class="quantity-decrease" ng-click="minus(item)">
+                                        <em id="minus">-</em>
+                                    </a>
+                                    <input type="number" class="quantity" value="{{item.goodsnum}}" ng-keyup="inputnum(item)">
+                                    <a class="quantity-increase" ng-click="plus(item)">
+                                        <em id="plus">+</em>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="option-btns">
+                                <div class="shop-btn-com">
+                                    <a class="cart-new-btn del-prod-btn" ng-click="removecart(item,$index)">
+                                        <span class="btn-msg-in">删除</span>
+                                    </a>
+                                    <a class="cart-new-btn complete-edit-btn" ng-click="finishcart(item)">
+                                        <span class="right-boundary"></span>
+                                        <span class="btn-msg-in">完成</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="today-benefit-module">
+        <div class="gray-text1">
+            <span class="gray-layout1"><span class="gray-text-img"></span>今日福利</span>
+        </div>
+        <ul class="today-benefit-ul">
+            <li>
+                <a class="box-flex-f" href="">
+                    <div class="box-flex-c act-img-block">
+                        <img src="img/cart/act.coupon.png" alt="" class="act-img">
+                    </div>
+
+                    <div class="box-flex-c act-msg">
+                        <span class="act-title">每日神券</span>
+                        <span class="act-detail">限量发放</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="box-flex-f" href="#seckill">
+                    <div class="box-flex-c act-img-block">
+                        <img src="img/cart/act.secskll.png" alt="" class="act-img">
+                    </div>
+
+                    <div class="box-flex-c act-msg">
+                        <span class="act-title">整点秒杀</span>
+                        <span class="act-detail">限时抢购</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="cartbottom"></div>
+    <div class="paycart">
+        <div class="payment-total-bar" id="payment">
+            <div class="shp-cart-info shp-cart-info-new  box-flex-d">
+                <strong id="shpCartTotal"  class="shp-cart-total">合计:<span class="bottom-bar-price" id="cart_realPrice">{{allprice|currency : '￥'}}</span></strong>
+
+            </div>
+            <a class="btn-right-block box-flex-d" id="submit">去结算<span id="checkedNum">({{allnum}})</span></a>
+        </div>
+    </div>
+</div>

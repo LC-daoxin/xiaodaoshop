@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css"/>
+    <script src="js/libs/jquery-2.2.3.js"></script>
+    <script src="js/libs/swiper-3.3.1.min.js"></script>
+    <title></title>
+</head>
+<body>
+<!--<div class="container">
+    <section class="main-content">
+        <input  type="file" id="take-picture" accept="image/*">
+        <img src="about:blank" id="show-picture">
+    </section>
+</div>-->
+
+
+
+<p>上知天文，下知地理</p>
+<input type="text" id="question" style="border:1px solid black"/>
+<input type="submit" id="post" value="问"/>
+<p id="answer"></p>
+<script>
+    $("#post").on("click",function(){
+        var question = $("#question").val();
+        console.log(typeof question);
+        $.ajax({
+            type: "get",
+            async:false,
+            url: "http://api.jisuapi.com/iqa/query?appkey=7650a841abacc32d&question="+question,
+            dataType: "jsonp",
+            jsonp: "callback",
+            jsonpcallback: "getBack",
+            success: function (data) {
+                console.log(data);
+                $("#answer").html(data.result.content);
+            }
+        });
+    })
+</script>
+
+
+
+
+<!--<script>
+    (function(){
+        var takePicture = document.querySelector("#take-picture");
+        var showPicture = document.querySelector("#show-picture");
+
+        if(takePicture && showPicture){
+            takePicture.onchange = function(event){
+                var files = event.target.files;//获取本地文件
+                var file = null;
+                if (files && files.length > 0) { //文件存在
+                    file = files[0];//可以选择的是数组
+                    var URL = window.URL || window.webkitURL;
+                    var imgURL = URL.createObjectURL(file);//file读取是二进制
+                    showPicture.src = imgURL;
+                    //如果第一次存在了，再次拍照，可以替换
+                    URL.revokeObjectURL(imgURL);
+                }
+            }
+        }
+    })();
+    /*$(function () {
+        $(window).resize(function () {
+            if($(window).width()>=640){
+                $(document.body).append("<div class='pc'><p>这是PC端</p></div>");
+            }else{
+                $(document.body).append("<div class='pc'><p>这是phone端</p></div>");
+            }
+        })
+    });*/
+    $(function () {
+        if (!navigator.userAgent.match(/mobile/i)) {
+            $(document.body).append("<div class='pc'><p>这是PC端</p></div>");
+        }else{
+            $(document.body).append("<div class='pc'><p>这是手机端</p></div>");
+        }
+    });
+    var url='http://witmax.cn/index.php?key0=0&key1=1&key2=2';
+    function parseQueryString(){
+        var locationSearch=url.slice(-21).length>0?url.slice(-21):'';
+        console.log(locationSearch);
+        var str1=locationSearch.slice(1);
+        console.log(str1);
+        var arr1=str1.split('&');
+        var item=null;
+        var value=null;
+        var name=null;
+        var obj={};
+        for(var i=0;i<arr1.length;i++){
+            item=arr1[i].split('=');
+            name=item[0];
+            value=item[1];
+            obj[name]=value;
+        }
+        return obj;
+    }
+    parseQueryString()
+
+
+
+</script>-->
+<!--<script>
+    var gulp = require('gulp');
+    uglify = require("gulp-uglify");
+    /*minifyCss = require("gulp-minify-css");
+     minifyHtml = require("gulp-minify-html");
+     jsHint = require("gulp-jshint");//检查代码错误不规范*/
+
+    gulp.task('minify-js', function() {
+        gulp.src("js/*.js")
+                .pipe(uglify())
+                .pipe(gulp.dest("dist/js"));
+    });
+    gulp.task('minify-js-app-controller', function() {
+        gulp.src("js/app/controller/*.js")
+                .pipe(uglify())
+                .pipe(gulp.dest("dist/js/app/controller/"));
+    });
+    gulp.task('minify-js-app-dircetive', function() {
+        gulp.src("js/app/dircetive/*.js")
+                .pipe(uglify())
+                .pipe(gulp.dest("dist/js/app/dircetive"));
+    });
+    gulp.task('minify-js-app', function() {
+        gulp.src("js/app/*.js")
+                .pipe(uglify())
+                .pipe(gulp.dest("dist/js/app"));
+    });
+    gulp.task('minify-js-app-service', function() {
+        gulp.src("js/app/service/*.js")
+                .pipe(uglify())
+                .pipe(gulp.dest("dist/js/app/service"));
+    });
+    gulp.task('minify-js-libs', function() {
+        gulp.src("js/libs/*.js")
+                .pipe(uglify())
+                .pipe(gulp.dest("dist/js/libs"));
+    });
+    /*gulp.task('minifyCss', function() {
+     gulp.src("css/!*.css")
+     .pipe(minifyCss())
+     .pipe(gulp.dest("dist/css"));
+     });*/
+    /*gulp.task('minify-html', function() {
+     gulp.src("*.js")
+     .pipe(minifyHtml())
+     .pipe(gulp.dest("dist/"));
+     });*/
+    /*gulp.task('jsHint', function() {
+     gulp.src("js/app/controller/!*.js")
+     .pipe(jsHint())
+     .pipe(jsHint.reporter());
+     });*/
+    gulp.task('default', function() {
+        gulp.start("minify-js","minify-js-app","minify-js-app-controller","minify-js-app-dircetive","minify-js-app-service","minify-js-libs");
+    });
+    /*
+     gulp.task('default', function() {
+     gulp.start("jsHint");
+     });*/
+</script>-->
+
+</body>
+</html>
+

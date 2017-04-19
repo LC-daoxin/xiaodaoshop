@@ -1,0 +1,82 @@
+.key{
+    height: 35px;
+    text-indent: 1em;
+    width: 100%;
+    border:1px solid gainsboro;
+    border-radius: 10px;
+    font-size: 14px;
+}
+#box2{
+    margin: 5px 20px 20px;
+    position:relative;
+    text-align: center;
+}
+.xd-search-icon-shortcut{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 44px;
+    overflow: hidden;
+}
+.xd-search-icon-shortcut i{
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    height: 44px;
+    line-height: 44px;
+    color:#848689;
+}
+/*#back{
+    position: absolute;
+    left:0;
+}*/
+#wen1{
+    font-size: 18px;
+}
+#wen2{
+    font-size: 18px;
+}
+#back i{
+    font-size: 29px;
+    color:black;
+}
+.hot{
+    margin:20px 20px 0;
+}
+
+.show{
+    margin:20px 20px;
+}
+/*#sousuo{
+    position: absolute;
+    right:0;
+}
+#sousuo i{
+    font-size: 29px;
+    color:black;
+}*/
+
+#huan{
+    float: right;
+}
+#clear{
+    float: right;
+}
+#shangpin{
+    list-style: none;
+    height: 102px;
+}
+#shangpin li{
+    display: inline-block;
+    margin-top:12px;
+    margin-right: 10px;
+    padding: 3px;
+}
+#hislist{
+    margin-top: 20px;
+}
+#hislist li{
+    margin-top: 5px;
+    display: none;
+}

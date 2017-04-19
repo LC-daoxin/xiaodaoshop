@@ -1,0 +1,78 @@
+<header class="topfixed" id="topfixed">
+    <ul class="tap-list">
+        <li id="0" style="width: 20%">
+            <p>00:00</p>
+            <p>秒杀中</p>
+        </li>
+        <li id="8" style="width: 20%">
+            <p>08:00</p>
+            <p>即将开场</p>
+        </li>
+        <li id="12" style="width: 20%">
+            <p>12:00</p>
+            <p>即将开场</p>
+        </li>
+        <li id="16" style="width: 20%">
+            <p>16:00</p>
+            <p>即将开场</p>
+        </li>
+        <li id="20" style="width: 20%">
+            <p>20:00</p>
+            <p>即将开场</p>
+        </li>
+    </ul>
+</header>
+<div class="errPic" style="display: none">
+    <img src="img/kill-rocket.png">
+    <span class="errPic-content">秒杀商品正在路上</span>
+</div>
+<div class="list-head">
+    <div style="display: none;">
+        <span class="seckill-status" id="seckillTile">秒杀中</span>
+        <span class="seckill-round-no" id="seckillRoundNo">08:00</span>
+    </div>
+    <span class="buy-txt" id="seckillBuyTxt">秒杀中 先下单先得哦</span>
+	<span class="time">
+		<span class="static-txt-end" id="staticTxtEnd">距结束</span>
+		<div id="seckill_time" class="timeText">
+            <span class="seckill-time">00</span>
+            <span class="time-separator">:</span>
+            <span class="seckill-time">00</span>
+            <span class="time-separator">:</span>
+            <span class="seckill-time">00</span>
+        </div>
+	</span>
+</div>
+<div class="seckill-body">
+    <ul class="good-list bdr-b" id="seckilling">
+        <!--<li class="bdr-bom" id="{{item.goodsid}}" ng-repeat="item in killlists track by $index">
+            <div class="skill-pic">
+                <div class="killimg">
+                    <a href="goods.html?id={{item.goodsid}}"><img ng-src="{{item.imgsrc}}"></a>
+                </div>
+            </div>
+            <a href="goods.html?id={{item.goodsid}}"><p class="g-title">{{item.tjtitle}}</p></a>
+            <p class="g-price">
+                <i class="doller">￥</i>{{item.bigprice}}<span class="f-s-12">.{{item.smallprice}}</span>
+            </p>
+            <div class="skill-price">
+                <p class="g-price-odd">
+                    <del>{{item.killprice}}</del>
+                </p>
+                <div class="skill-lod">
+                    <span class="sale-count">已秒<em>{{item.percentage}}</em>%</span>
+                    <div class="kill-progress">
+                        <div class="skill-pro-bg">
+                            <p class="skill-iteam-progress">
+                                <span class="skill-pro-insetbg">
+                                    <span class="skill-iteam-pro" style="width: {{item.percentage}}%;"></span>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="goods.html?id={{item.goodsid}}"><span class="skill-count">去秒杀</span><span class="skill-count1">秒杀完毕</span></a>
+        </li>-->
+    </ul>
+</div>

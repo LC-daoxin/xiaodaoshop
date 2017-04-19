@@ -1,0 +1,97 @@
+/**
+ * Created by Administrator on 2016/8/15.
+ */
+myApp.config(["$routeProvider",function($routeProvider){
+    $routeProvider
+        .when("/index-s",{
+            templateUrl:"view/index/index-s.html",
+            controller:"indexCtrl"
+        })
+        .when("/search",{
+            templateUrl:"view/index/search.html",
+            controller:"searchCtrl"
+        })
+        .when("/login",{
+            templateUrl:"view/index/login.html",
+            controller:"loginCtrl"
+        })
+        .when("/register",{
+            templateUrl:"view/index/register.html",
+            controller:"registerCtrl"
+        })
+        .when("/mine",{
+            templateUrl:"view/index/mine.html",
+            controller:"mineCtrl"
+        })
+        .when("/expect",{
+            templateUrl:"view/index/expect.html",
+            controller:"expectCtrl"
+        })
+        .when("/classify",{
+            templateUrl:"view/index/classify.html",
+            controller:"classifyCtrl"
+        })
+        .when("/news",{
+            templateUrl:"view/index/news.html",
+            controller:"newsCtrl"
+        })
+        .when("/cart",{
+            templateUrl:"view/index/cart.html",
+            controller:"cartCtrl"
+        })
+        .when("/seckill",{
+            templateUrl:"view/index/seckill.html",
+            controller:"seckillCtrl"
+        })
+        .when("/weather",{
+            templateUrl:"view/index/weather.html",
+            controller:"weatherCtrl"
+        })
+        .when("/attention",{
+            templateUrl:"view/index/attention.html",
+            controller:"attentionCtrl"
+        })
+        .when("/activity1",{
+            templateUrl:"view/index/activity1.html",
+            controller:"activity1Ctrl"
+        })
+        .when("/activity2",{
+            templateUrl:"view/index/activity2.html",
+            controller:"activity2Ctrl"
+        })
+        .when("/activity3",{
+            templateUrl:"view/index/activity3.html",
+            controller:"activity3Ctrl"
+        })
+        .when("/activity4",{
+            templateUrl:"view/index/activity4.html",
+            controller:"activity4Ctrl"
+        })
+        .otherwise({
+            redirectTo:"/index-s"
+        })
+
+}]);
+myGoods.config(["$routeProvider",function($routeProvider){
+    $routeProvider
+        .when("/goods-s",{
+            templateUrl:"view/goods/goods-s.html",
+            controller:"goods-sCtrl"
+        })
+        .when("/map",{
+            templateUrl:"view/goods/map.html",
+            controller:"mapCtrl"
+        })
+        .when("/goodsdetails",{
+            templateUrl:"view/goods/goodsdetails.html",
+            controller:"goodsdetailsCtrl"
+        })
+        .when("/goodsevaluate",{
+            templateUrl:"view/goods/goodsevaluate.html",
+            controller:"goodsevaluateCtrl"
+        })
+        .otherwise({
+            redirectTo:"/goods-s"
+        })
+
+}]);

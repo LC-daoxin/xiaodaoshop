@@ -1,0 +1,46 @@
+<ul class="tabs">
+    <li class="tabs-item" data-num="1">
+        <p class="tab-assess-title">全部评价</p>
+
+        <p class="tab-assess-num"></p>
+    </li>
+    <li class="tabs-item" data-num="2">
+        <p class="tab-assess-title">好评</p>
+
+        <p class="tab-assess-num"></p>
+    </li>
+    <li class="tabs-item" data-num="3">
+        <p class="tab-assess-title">中评</p>
+
+        <p class="tab-assess-num"></p>
+    </li>
+    <li class="tabs-item" data-num="4">
+        <p class="tab-assess-title">差评</p>
+
+        <p class="tab-assess-num"></p>
+    </li>
+    <li class="tabs-item" data-num="5">
+        <p class="tab-assess-title">有图</p>
+
+        <p class="tab-assess-num"></p>
+    </li>
+    <div style="clear:both"></div>
+</ul>
+<ul class="commentlist">
+    <li class="comment-li" ng-repeat="comment in commentarr track by $index">
+        <div class="assess-wrapper">
+            <div class="assess-top">
+                <span class="user-name">{{comment.username|hide}}</span>
+                <span class="assess-date">{{comment.time}}</span>
+            </div>
+            <div class="assess-bottom">
+                <span class="star" id="{{comment.userid}}"></span>
+                <p class="assess-content">{{comment.commenttext}}</p>
+
+                <p class="pay-date">购买日期：<span>{{comment.buytime}}</span></p>
+            </div>
+        </div>
+    </li>
+</ul>
+<div gbacktop ></div>
+

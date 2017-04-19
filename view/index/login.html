@@ -1,0 +1,35 @@
+<div class="gtitle"></div>
+<div class="page">
+    <div class="wrap">
+        <div class="input-container">
+            <input id="loginname" class="acc-input username" type="text" placeholder="用户名/邮箱/已验证手机"
+                   autocomplete="off">
+        </div>
+        <div class="input-container">
+            <input id="password" type="password" class="acc-input password" placeholder="请输入密码" autocomplete="off">
+            <div class="label-checkbox">
+                <div class="checkbtn">
+                    <span class="yuanbtn"></span>
+                    <span class="b-text">abc</span>
+                    <span class="b-pwd">...</span>
+                </div>
+            </div>
+        </div>
+        <div class="notice">&nbsp;
+            <span class="hide" id="notice" style="font-size:14px;">请先拖动验证码到相应位置</span>
+            <span class="warntext">登录失败，请确认是否输入正确的用户名和密码!</span>
+        </div>
+        <div id="embed-captcha"></div>
+        <p id="wait" class="show1">正在加载验证码......</p>
+        <button id="loginBtn" class="btn btngray" disabled>登 录</button>
+    </div>
+    <label for="remberme" class="remberme" id="laberrm">
+        <input type="checkbox" id="remberme" checked="checked">
+        <span class="icon1 icon-rember" id="icon-rember"></span>
+        一个月内免登录
+    </label>
+    <div class="quick-nav clearfix">
+        <a href="javascript:;" class="findpwd"><i class="icon1 icon-clock"></i>找回密码</a>
+        <a href="#register" class="quickReg"><i class="icon1 icon-reg"></i>快速注册</a>
+    </div>
+</div>

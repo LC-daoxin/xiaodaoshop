@@ -1,0 +1,39 @@
+<div class="gtitle"></div>
+<div class="page">
+    <div class="wrap">
+        <div class="input-box">
+            <div class="input-container" id="telborder">
+                <input type="tel" id="telphone" name="telphone" class="acc-input telphone" ng-model="tel.telphone" placeholder="请输入手机号" ng-pattern="/^1[3|4|5|7|8]\d{9}$/" autocomplete="off">
+            </div>
+            <input type="button" class="mesg-code mesg-disable" id="telsubmit" value="获取短信验证码" style="-webkit-appearance: none;">
+  </span>
+                <!--<div class="tishi" ng-show="telform.telphone.$error.pattern">请输入格式正确的手机号码</div>-->
+        </div>
+        <div class="input-container"  id="Securitycodeborder">
+                <input id="Securitycode" name="Securitycode" class="acc-input username" type="text" placeholder="请输入短信验证码"
+                       autocomplete="off">
+        </div>
+        <div class="input-container" id="passwordborder">
+                <input id="password" name="password" type="password" class="acc-input password" placeholder="请设置6-20位登录密码" ng-minlength="6" ng-maxlength="20" autocomplete="off">
+            <div class="label-checkbox">
+                <div class="checkbtn">
+                    <span class="yuanbtn"></span>
+                    <span class="b-text">abc</span>
+                    <span class="b-pwd">...</span>
+                </div>
+            </div>
+        </div>
+        <div id="popup-captcha-mobile"></div>
+        <div class="notice">&nbsp;
+            <span class="warnred warnred-tel">手机号格式错误</span>
+            <span class="warnred warnred-y">该手机号已被注册</span>
+            <span class="warnred warnred-p">短信验证码时间间隔小于120s，请稍后再试</span>
+            <span class="warnred warnred-m">验证码错误</span>
+            <span class="warnred warnred-pw">密码长度在6~18之间，只能包含字符、数字和下划线</span>
+            <span class="warnred hide" id="notice" >请先拖动验证码到相应位置</span>
+        </div>
+        <div id="embed-captcha"></div>
+        <p id="wait" class="show">正在加载验证码......</p>
+        <button id="loginBtn" class="btn btngray" disabled>注册</button>
+    </div>
+</div>
